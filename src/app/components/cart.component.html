@@ -1,0 +1,9 @@
+<div *ngIf="contents.length > 0; else emptyCart">
+  <ul>
+    <li *ngFor="let item of contents">{{ item.item }} {{ item.quantity }}</li>
+  </ul>
+</div>
+
+<ng-template #emptyCart>
+  <h2>Your cart is empty</h2>
+</ng-template>
